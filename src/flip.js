@@ -4,11 +4,13 @@
 
     var rotateAxis = "rotate" + $dom.data("axis");
     $dom.find(".front").css({
-      transform: rotateAxis + ($dom.data("reverse") ? "(-180deg)" : "(180deg)")
+      transform: rotateAxis + ($dom.data("reverse") ? "(-180deg)" : "(180deg)"),
+      visibility: 'hidden'
     });
 
     $dom.find(".back").css({
-      transform: rotateAxis + "(0deg)"
+      transform: rotateAxis + "(0deg)",
+      visibility: 'visible'
     });
   };
 
@@ -17,11 +19,13 @@
 
     var rotateAxis = "rotate" + $dom.data("axis");
     $dom.find(".front").css({
-      transform: rotateAxis + "(0deg)"
+      transform: rotateAxis + "(0deg)",
+      visibility: 'visible'
     });
 
     $dom.find(".back").css({
-      transform: rotateAxis + ($dom.data("reverse") ? "(180deg)" : "(-180deg)")
+      transform: rotateAxis + ($dom.data("reverse") ? "(180deg)" : "(-180deg)"),
+      visibility: 'hidden'
     });
   };
 
@@ -56,7 +60,8 @@
         }
 
         $dom.find(".back").css({
-          transform: rotateAxis + "(" + (settings.reverse? "180deg" : "-180deg") + ")"
+          transform: rotateAxis + "(" + (settings.reverse? "180deg" : "-180deg") + ")",
+          visibility: 'hidden'
         });
 
         $dom.css({
